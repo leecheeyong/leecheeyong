@@ -13,3 +13,4 @@ const readMe = {
 module.exports = readMe;
 ```
 [](https://komarev.com/ghpvc/?username=leecheeyong&color=orange)
+![](https://dev.discordprofiles.me/badge/playing/190916650143318016)
