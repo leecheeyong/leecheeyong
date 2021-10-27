@@ -4,7 +4,7 @@ const readMe = {
     birthday: "29 March",
     links: { "github": "github.com/leecheeyong", "botStudios": "github.com/BotStudios" },
     languages: ["Javascript", "Python", "Koltin"],
-    aMemberOf: function orgs(){
+    aMemberOf: orgs() => {
      console.log("@BotStudios", "@TeamJoeLee")
     }
     
