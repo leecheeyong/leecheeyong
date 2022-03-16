@@ -12,4 +12,4 @@ const readMe = {
 
 module.exports = readMe;
 ```
-![](https://komarev.com/ghpvc/?username=leecheeyong&color=orange)
+[](https://komarev.com/ghpvc/?username=leecheeyong&color=orange)
