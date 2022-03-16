@@ -1,5 +1,5 @@
-![](https://garden.is-a.dev/v2/discordstatus/785783071244025867/badge)
-![](https://garden.is-a.dev/v2/discordactivity/785783071244025867/badge)
+![](https://shields-production.up.railway.app/endpoint?url=https://garden.is-a.dev/v2/discordstatus/785783071244025867)
+![](https://shields-production.up.railway.app/endpoint?url=https://garden.is-a.dev/v2/discordactivity/785783071244025867)
 ```js
 const readMe = {
     name: "Chee Yong",
