@@ -7,7 +7,7 @@ const readMe = {
     links: { "github": "github.com/leecheeyong", "botStudios": "github.com/BotStudios" },
     languages: ["Javascript", "Python", "Koltin"],
     aMemberOf: orgs() => {
-     console.log("@BotStudios", "@TeamJoeLee")
+     console.log("@CodingStudios", "@BotStudios", "@TeamJoeLee")
     }
     
 }
