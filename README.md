@@ -5,7 +5,7 @@ const readMe = {
     name: "Chee Yong",
     birthday: "29 March",
     links: { "github": "github.com/leecheeyong", "botStudios": "github.com/BotStudios" },
-    languages: ["Javascript", "Python", "Koltin"],
+    languages: ["Javascript", "Python", "Koltin", "HTML", "CSS"],
     aMemberOf: orgs() => {
      console.log("@CodingStudios", "@BotStudios", "@TeamJoeLee")
     }
