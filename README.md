@@ -3,7 +3,7 @@
 ```js
 const readMe = {
     name: "Chee Yong",
-    birthday: "29 March",
+    bio: "www.joelee.works",
     links: { "github": "github.com/leecheeyong", "botStudios": "github.com/BotStudios" },
     languages: ["Javascript", "Python", "HTML", "CSS"],
     aMemberOf: () => {
