@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mobileAssetID</key>
+	<string>The Lake</string>
+	<key>thumbnailPath</key>
+	<string>/System/Library/Desktop Pictures/.thumbnails/The Lake.heic</string>
+    <key>isDynamic</key>
+    <true/>
+    <key>isSolar</key>
+    <true/>
+    <key>width</key>
+    <real>6016.0</real>
+    <key>height</key>
+    <real>6016.0</real>
+</dict>
+</plist>
