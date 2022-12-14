@@ -6,8 +6,7 @@ const readMe = {
     github: "github.com/leecheeyong",
     botStudios: "github.com/BotStudios"
   },
-  languages: ["Javascript", 
-  "Python", "HTML", "CSS"],
+  languages: ["Javascript", "Python", "HTML", "CSS"],
   status: "DND",
   activity: "Custom Status (我有正面思想)",
   aMemberOf: () => {
