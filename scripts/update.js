@@ -2,10 +2,15 @@ const axios = require('axios');
 const substrings = require('substrings');
 const fs = require('fs');
 const dayjs = require('dayjs');
+const utc = require("dayjs/plugin/utc");
+const timezone = require("dayjs/plugin/timezone");
 const js_beautify = require("js-beautify").js;
 
 const readMe = fs.readFileSync('./README.md', 'utf-8');
 const codeBlock = substrings.getOne('```js', '```', readMe);
+
+dayjs.extend(timezone);
+dayjs.extend(utc);
 
 var edited;
 (async () => {
