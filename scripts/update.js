@@ -3,7 +3,7 @@ const substrings = require('substrings');
 const fs = require('fs');
 
 const readMe = fs.readFileSync('./README.md', 'utf-8');
-const codeBlock = substrings.getOne('```', '```', readMe);
+const codeBlock = substrings.getOne('```js', '```', readMe);
 
 var edited;
 (async () => {
