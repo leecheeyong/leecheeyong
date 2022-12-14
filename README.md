@@ -1,10 +1,9 @@
 ```js
 const readMe = {
   name: "Chee Yong",
-  bio: "www.joelee.works",
   links: {
     github: "github.com/leecheeyong",
-    botStudios: "github.com/BotStudios"
+    bio: "www.joelee.works"
   },
   languages: ["Javascript", "Python", "HTML", "CSS"],
   status: "DND",
