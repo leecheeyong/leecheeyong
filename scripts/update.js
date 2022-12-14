@@ -10,5 +10,5 @@ var edited;
 const status = (await axios.get(`https://garden.is-a.dev/v2/discordstatus/785783071244025867`).catch(e => console.log(e))).data;
 const activity = (await axios.get(`https://garden.is-a.dev/v2/discordactivity/785783071244025867`).catch(e => console.log(e))).data;
 const finalCode = eval(`function edit() { \n${codeBlock}\n readMe.status = "${status.message}"; readMe.activity = "${activity.message}"; return readMe }; edit()`);
-fs.writeFileSync('./README.md', `${readMe.replace(codeBlock, '```js' + `const readMe = ${JSON.stringify(finalCode)}`)}` + '```');
+fs.writeFileSync('./README.md', `${readMe.replace(codeBlock, `\nconst readMe = ${JSON.stringify(finalCode)}`)}`);
 })();
