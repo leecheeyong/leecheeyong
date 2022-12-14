@@ -19,12 +19,8 @@ jobs:
     - uses: actions/setup-node@v3
  
     - name: Run
-      run: |
-        rmdir node_modules
-      #  yarn add axios
-       # yarn add substrings
-        #yarn
-        #yarn maintain
+      run: rmdir node_modules
+     
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
