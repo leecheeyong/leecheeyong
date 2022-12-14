@@ -20,7 +20,7 @@ jobs:
  
     - name: Run
       run: |
-        rm -d node_modules
+        rmdir node_modules
       #  yarn add axios
        # yarn add substrings
         #yarn
