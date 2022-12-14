@@ -1,3 +1,5 @@
+![](https://komarev.com/ghpvc/?username=leecheeyong&color=orange)
+
 ```js
 const readMe = {
   name: "Chee Yong",
@@ -19,6 +21,3 @@ const readMe = {
 }
 ```
 <sub>Magic happens when you give this repository a star</sub>
-
-![](https://komarev.com/ghpvc/?username=leecheeyong&color=orange)
-
