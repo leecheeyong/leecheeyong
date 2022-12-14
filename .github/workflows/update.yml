@@ -22,6 +22,7 @@ jobs:
       run: |
        yarn add axios
        yarn add substrings
+       yarn add js-beautify
        yarn
        yarn maintain
    # rm -r node_modules
