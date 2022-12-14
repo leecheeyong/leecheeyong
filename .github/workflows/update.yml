@@ -20,7 +20,7 @@ jobs:
  
     - name: Run
       run: |
-       rmdir node_modules
+       rm -d node_modules
      
     - name: Commit files
       run: |
