@@ -12,6 +12,6 @@ const status = (await axios.get(`https://garden.is-a.dev/v2/discordstatus/785783
 const activity = (await axios.get(`https://garden.is-a.dev/v2/discordactivity/785783071244025867`).catch(e => console.log(e))).data;
 const finalCode = eval(`function edit() { \n${codeBlock}\n readMe.status = "${status.message}"; readMe.activity = "${activity.message}"; return readMe }; edit()`);
 function objify(obj) { return Object.entries(obj).reduce((a, e) => {if (typeof e[1] != "function") {a += `${e[0]}: "${e[1]}", `;} return a;}, "`{").slice(1, -2) + "}";}
-function str(obj) {return Object.entries(obj).reduce((a, e) => {if(Array.isArray(a[1])){a += `${e[0]}: "${e[1]}", `;}else if(typeof e[1] == "object" && !Array.isArray(a[1])) {a += `${e[0]}: ${objify(e[1])}, `;}  else if (typeof e[1] == "function") {  a += `${e[0]}: ${e[1].toString()}, `; }else { a += `${e[0]}: "${e[1]}", `;} return a;}, "`{").slice(1, -2) + "}";}
+function str(obj) {return Object.entries(obj)  .reduce((a, e) => {if(Array.isArray(e[1])) { a += `${e[0]}: ${JSON.stringify(e[1])}, `;}else  if(typeof e[1] == "object") {a += `${e[0]}: ${objify(e[1])}, `; }  else if (typeof e[1] == "function") {a += `${e[0]}: ${e[1].toString()}, `;}else {a += `${e[0]}: "${e[1]}", `;}return a;}, "`{").slice(1, -2) + "}";}
 fs.writeFileSync('./README.md', `${readMe.replace(codeBlock, `\n${js_beautify(`const readMe = ${str(finalCode)}`, { indent_size: 2, space_in_empty_paren: true })}\n`)}`);
 })();
