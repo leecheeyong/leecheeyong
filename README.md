@@ -11,7 +11,6 @@ const readMe = {
     }
 }
 ```
-```
 
 ![](https://komarev.com/ghpvc/?username=leecheeyong&color=orange)
 
