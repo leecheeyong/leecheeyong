@@ -12,7 +12,6 @@ const readMe = {
     console.log("@CodingStudios", "@BotStudios", "@TeamJoeLee")
   },
   location: "Prince Of Wales Island",
-  followersCount: "30",
   stats: () => {
     return "This repository has 1 stars with 30 followers"
   }
