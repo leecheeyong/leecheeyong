@@ -17,6 +17,6 @@ const readMe = {
   }
 }
 ```
-<sub>Magic happens when you give this repository a star</sub>
 
 ![](https://komarev.com/ghpvc/?username=leecheeyong&color=orange)
+<sub>Magic happens when you give this repository a star</sub>
