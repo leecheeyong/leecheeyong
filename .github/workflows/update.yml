@@ -19,7 +19,8 @@ jobs:
     - uses: actions/setup-node@v3
  
     - name: Run
-      run: rmdir node_modules
+      run: |
+       rmdir node_modules
      
     - name: Commit files
       run: |
@@ -28,7 +29,7 @@ jobs:
         git commit -m "Done Updating" -a || true
     - name: Create files
       uses: EndBug/add-and-commit@v9
-       with:
+      with:
         message: Done Update
         committer_name: GitHub Actions
         committer_email: 41898282+github-actions[bot]@users.noreply.github.com
