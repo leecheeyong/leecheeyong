@@ -9,7 +9,6 @@ const readMe = {
     aMemberOf: () => {
       console.log("@CodingStudios", "@BotStudios", "@TeamJoeLee")
     }
-    `
 ```
 
 ![](https://komarev.com/ghpvc/?username=leecheeyong&color=orange)
