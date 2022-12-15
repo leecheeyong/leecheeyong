@@ -5,10 +5,10 @@ const readMe = {
     github: "github.com/leecheeyong",
     bio: "www.joelee.works"
   },
-  languages: ["Javascript", "Python", "HTML", "CSS"],
+  languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
   status: "DND - Custom Status (我有正面思想)",
   aMemberOf: () => {
-    console.log("@CodingStudios", "@BotStudios", "@TeamJoeLee")
+    console.log("@CodingStudios", "@BotStudios")
   },
   location: "Prince Of Wales Island",
   stats: () => {
