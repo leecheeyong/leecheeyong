@@ -22,8 +22,5 @@ const finalCode = eval(`function edit() { \n${codeBlock}\n readMe.status = "${st
 function objify(obj) { return Object.entries(obj).reduce((a, e) => {if (typeof e[1] != "function") {a += `${e[0]}: "${e[1]}", `;} return a;}, "`{").slice(1, -2) + "}";}
 function str(obj) {return Object.entries(obj)  .reduce((a, e) => {if(Array.isArray(e[1])) { a += `${e[0]}: ${JSON.stringify(e[1])}, `;}else  if(typeof e[1] == "object") {a += `${e[0]}: ${objify(e[1])}, `; }  else if (typeof e[1] == "function") {a += `${e[0]}: ${e[1].toString()}, `;}else {a += `${e[0]}: "${e[1]}", `;}return a;}, "`{").slice(1, -2) + "}";}
 fs.writeFileSync('./README.md', `${readMe.replace(codeBlock, `\n${js_beautify(`const readMe = ${str(finalCode)}`, { indent_size: 2, space_in_empty_paren: true })}\n`)}`);
-fs.writeFileSync('./profile/discord.json', `${JSON.stringify({
-  status: status.message,
-  activity: activity.message
-})}`)
+fs.writeFileSync('./profile/discord.txt', `${status.message} - ${activity.message}`)
 })();
