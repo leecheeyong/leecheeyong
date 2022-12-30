@@ -8,9 +8,12 @@ const js_beautify = require("js-beautify").js;
 
 const readMe = fs.readFileSync('./README.md', 'utf-8');
 const codeBlock = substrings.getOne('```js', '```', readMe);
+const code = JSON.parse(substrings.getOne('const readMe =', '', codeBlock));
 
 dayjs.extend(timezone);
 dayjs.extend(utc);
+
+console.log(code)
 
 var edited;
 (async () => {
