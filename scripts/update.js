@@ -13,7 +13,7 @@ const code = substrings.getOne('const readMe =', ';', codeBlock);
 dayjs.extend(timezone);
 dayjs.extend(utc);
 
-console.log(code)
+console.log(typeof code)
 
 var edited;
 (async () => {
