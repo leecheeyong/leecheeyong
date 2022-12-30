@@ -14,7 +14,7 @@ const readMe = {
   stats: () => {
     return "30 followers with 1 stars on this repository, 30/12/22"
   },
-  since: "30/12/22"
+  since: "10:51 am/AM"
 }
 ```
 
