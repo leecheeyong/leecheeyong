@@ -7,14 +7,14 @@ const readMe = {
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
   status: "DND - Custom Status (我有正面思想)",
-  lastSeen: "10:53 am/AM"
+  lastSeen: "10:53 am/AM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
   location: "Prince Of Wales Island",
   stats: () => {
     return "30 followers with 1 stars on this repository, 30/12/22"
-  },
+  }
 }
 ```
 
