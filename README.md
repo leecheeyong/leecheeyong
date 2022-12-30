@@ -15,7 +15,7 @@ const readMe = {
   stats: () => {
     return "30 followers with 1 stars on this repository, 30/12/22"
   }
-}
+};
 ```
 
 ![](https://komarev.com/ghpvc/?username=leecheeyong&color=orange)
