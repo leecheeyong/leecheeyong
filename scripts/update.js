@@ -22,7 +22,7 @@ const activity = (await axios.get(`https://garden.is-a.dev/v2/discordactivity/78
 const { location, followers } = (await fetch({ url: `https://api.github.com/users/leecheeyong` }).catch(e => console.log(e))).data;
 const { stargazers_count } = (await fetch({ url: `https://api.github.com/repos/leecheeyong/leecheeyong` }).catch(e => console.log(e))).data;
   
-console.log(`${status.message} - ${activity.message}` != `${readMe.status}`, `${status.message} - ${activity.message}`, `${readMe.status}`);
+console.log(`${status.message} - ${activity.message}` != `${code.status}`, `${status.message} - ${activity.message}`, `${code.status}`);
   
 const finalCode = eval(`function edit() { \n${codeBlock}\n readMe.status = "${status.message} - ${activity.message}"; readMe.lastSeen = "${`${status.message} - ${activity.message}` != `${code.status}` ? `${dayjs().tz("Asia/Taipei").format("HH:mm a")}` : `${code.lastSeen}`}"; readMe.location = "${location}"; readMe.stats = () => { return "${followers} followers with ${stargazers_count} stars on this repository, ${dayjs().tz("Asia/Taipei").format("DD/MM/YY")}" };  return readMe }; edit()`);
 function objify(obj) { return Object.entries(obj).reduce((a, e) => {if (typeof e[1] != "function") {a += `${e[0]}: "${e[1]}", `;} return a;}, "`{").slice(1, -2) + "}";}
