@@ -1,4 +1,5 @@
 const axios = require('axios');
+const { fetch, setRelays } = require('fetch-relay');
 const substrings = require('substrings');
 const fs = require('fs');
 const dayjs = require('dayjs');
@@ -12,15 +13,14 @@ const code = JSON.stringify(substrings.getOne('const readMe =', ';', codeBlock))
 
 dayjs.extend(timezone);
 dayjs.extend(utc);
-
-console.log(typeof code)
+setRelays(['https://cors-relay.vercel.app', 'https://proxy-3-one.vercel.app/', 'https://relay-1.vercel.app', 'https://relay-2.vercel.app', 'https://relay-3.vercel.app', 'https://relay-4.vercel.app', 'https://relay-5.vercel.app']);
 
 var edited;
 (async () => {
 const status = (await axios.get(`https://garden.is-a.dev/v2/discordstatus/785783071244025867`).catch(e => console.log(e))).data;
 const activity = (await axios.get(`https://garden.is-a.dev/v2/discordactivity/785783071244025867`).catch(e => console.log(e))).data;
-const { location, followers } = (await axios.get(`https://api.github.com/users/leecheeyong`).catch(e => console.log(e))).data;
-const { stargazers_count } = (await axios.get(`https://api.github.com/repos/leecheeyong/leecheeyong`).catch(e => console.log(e))).data;
+const { location, followers } = (await fetch({ url: `https://api.github.com/users/leecheeyong` }).catch(e => console.log(e))).data;
+const { stargazers_count } = (await fetch({ url: `https://api.github.com/repos/leecheeyong/leecheeyong` }).catch(e => console.log(e))).data;
   
 console.log(`${status.message} - ${activity.message}` != `${readMe.status}`, `${status.message} - ${activity.message}`, `${readMe.status}`);
   
