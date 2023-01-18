@@ -6,14 +6,14 @@ const readMe = {
     bio: "www.joelee.works"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "Offline - None",
-  lastSeen: "22:24 PM",
+  status: "DND - Custom Status (我有正面思想)",
+  lastSeen: "21:31 PM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
   location: "Prince Of Wales Island",
   stats: () => {
-    return "30 followers with 2 stars on this repository, 17/01/23"
+    return "30 followers with 2 stars on this repository, 18/01/23"
   }
 };
 ```
