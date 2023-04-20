@@ -7,7 +7,7 @@ const readMe = {
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
   status: "DND - Custom Status (please)",
-  lastSeen: "02:54 AM",
+  lastSeen: "03:12 AM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
