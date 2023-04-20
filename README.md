@@ -7,13 +7,13 @@ const readMe = {
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
   status: "DND - Custom Status (please)",
-  lastSeen: "03:44 AM",
+  lastSeen: "03:55 AM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
-  location: "undefined",
+  location: "Prince Of Wales Island",
   stats: () => {
-    return "undefined followers with 3 stars on this repository, 21/04/23"
+    return "39 followers with 3 stars on this repository, 21/04/23"
   }
 };
 ```
