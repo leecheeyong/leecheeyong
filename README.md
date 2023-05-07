@@ -7,7 +7,7 @@ const readMe = {
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
   status: "DND - Custom Status (i-am.surge.sh)",
-  lastSeen: "03:08 AM",
+  lastSeen: "03:19 AM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
