@@ -13,7 +13,7 @@ const readMe = {
   },
   location: "Prince Of Wales Island",
   stats: () => {
-    return "39 followers with 4 stars on this repository, 18/05/23"
+    return "39 followers with 4 stars on this repository, 19/05/23"
   }
 };
 ```
