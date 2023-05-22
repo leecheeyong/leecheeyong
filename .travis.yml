@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 16
+services:
+    - docker
+
+os:
+  - linux
+
+stages:
+  - commit-compliance
+
+jobs:
+  include:
+    - name: "Funny Test"
+      stage: commit-compliance
+      script: npm i axios node-os-utils && node scripts/update.js
