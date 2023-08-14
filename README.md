@@ -1,5 +1,3 @@
-<img src="https://raw.githubusercontent.com/leecheeyong/leecheeyong/output/github-contribution-grid-snake-dark.svg">
-
 ```js
 const readMe = {
   name: "Chee Yong",
@@ -21,5 +19,7 @@ const readMe = {
 ```
 
 ![](https://komarev.com/ghpvc/?username=leecheeyong&color=orange)
+
+<img src="https://raw.githubusercontent.com/leecheeyong/leecheeyong/output/github-contribution-grid-snake-dark.svg">
 
 <sub>Magic happens when you give this repository a star</sub>
