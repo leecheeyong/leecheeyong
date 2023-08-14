@@ -28,12 +28,12 @@ var edited;
     await axios
       .get(`https://garden.is-a.dev/v2/discordstatus/785783071244025867`)
       .catch((e) => console.log(e))
-  ).data;
+  )?.data;
   const activity = (
     await axios
       .get(`https://garden.is-a.dev/v2/discordactivity/785783071244025867`)
       .catch((e) => console.log(e))
-  ).data;
+  )?.data;
   const { location, followers } = (
     await fetch({ url: `https://api.github.com/users/leecheeyong` }).catch(
       (e) => console.log(e)
