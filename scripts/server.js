@@ -1,0 +1,10 @@
+const fetch = require('node-fetch');
+const express = require('express');
+const spotify = require('spotify-url-info')(fetch);
+const app = express();
+
+app.get("/artist/:id", async (req,res) => {
+  res.send(spotify.getData(req.params.id);
+})
+
+app.listen(3000)
