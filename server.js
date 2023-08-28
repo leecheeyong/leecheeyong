@@ -10,4 +10,4 @@ app.get("/artist/:id", async (req,res) => {
   res.send(spotify.getData(req.params.id);
 })
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
