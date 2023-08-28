@@ -1,7 +1,7 @@
 {
     "name": "scripts",
     "version": "1.0.0",
-    "main": "./scripts/server.js",
+    "main": "server.js",
     "license": "MIT",
     "scripts": {
         "maintain": "node ./scripts/update.js"
