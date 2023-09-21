@@ -3,7 +3,7 @@ const readMe = {
   name: "Chee Yong",
   links: {
     github: "github.com/leecheeyong",
-    bio: "www.joelee.works"
+    bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
   status: "Offline - None",
