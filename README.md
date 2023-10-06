@@ -6,14 +6,14 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "Offline - None",
-  lastSeen: "01:06 AM",
+  status: "DND - Spotify (Mayday; Stefanie Sun)",
+  lastSeen: "00:38 AM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
   location: "Prince Of Wales Island",
   stats: () => {
-    return "39 followers with 4 stars on this repository, 20/05/23"
+    return "43 followers with 4 stars on this repository, 07/10/23"
   }
 };
 ```
