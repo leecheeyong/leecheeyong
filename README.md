@@ -6,8 +6,8 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "DND - Spotify (Daniel Schulz)",
-  lastSeen: "00:17 AM",
+  status: "DND - Spotify (希林娜依•高)",
+  lastSeen: "00:34 AM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
