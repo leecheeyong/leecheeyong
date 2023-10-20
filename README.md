@@ -7,7 +7,7 @@ const readMe = {
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
   status: "DND - Spotify (队长)",
-  lastSeen: "23:07 PM",
+  lastSeen: "23:22 PM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
