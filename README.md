@@ -6,8 +6,8 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "DND - Spotify (队长; 陈思键)",
-  lastSeen: "23:35 PM",
+  status: "DND - Spotify (陈思键)",
+  lastSeen: "23:46 PM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
