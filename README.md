@@ -6,8 +6,8 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "Offline - None",
-  lastSeen: "01:30 AM",
+  status: "DND - None",
+  lastSeen: "22:41 PM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
