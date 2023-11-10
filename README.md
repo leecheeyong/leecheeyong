@@ -6,8 +6,8 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "DND - Spotify (Robin Schulz; Richard Judge)",
-  lastSeen: "15:26 PM",
+  status: "DND - Spotify (队长)",
+  lastSeen: "15:37 PM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
