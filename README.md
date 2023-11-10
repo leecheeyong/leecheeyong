@@ -6,14 +6,14 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "DND - Spotify (Zom Marie; LAZYLOXY)",
-  lastSeen: "02:59 AM",
+  status: "DND - Spotify (Tilly Birds)",
+  lastSeen: "03:15 AM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
   location: "Prince Of Wales Island",
   stats: () => {
-    return "43 followers with undefined stars on this repository, 11/11/23"
+    return "43 followers with 4 stars on this repository, 11/11/23"
   }
 };
 ```
