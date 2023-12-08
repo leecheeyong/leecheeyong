@@ -6,8 +6,8 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "DND - Spotify (Linda Ronstadt; James Ingram)",
-  lastSeen: "23:09 PM",
+  status: "DND - Spotify (Metro Boomin; A$AP Rocky; Roisee)",
+  lastSeen: "23:24 PM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
