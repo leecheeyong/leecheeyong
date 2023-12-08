@@ -6,8 +6,8 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "DND - Spotify (Anne-Marie; Niall Horan)",
-  lastSeen: "23:36 PM",
+  status: "DND - Spotify (队长)",
+  lastSeen: "23:47 PM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
