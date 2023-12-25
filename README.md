@@ -6,14 +6,14 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "Offline - None",
-  lastSeen: "01:46 AM",
+  status: "DND - Spotify (Stevie Wonder)",
+  lastSeen: "15:21 PM",
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
   location: "Prince Of Wales Island",
   stats: () => {
-    return "43 followers with 4 stars on this repository, 09/12/23"
+    return "43 followers with 4 stars on this repository, 25/12/23"
   }
 };
 ```
