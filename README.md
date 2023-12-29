@@ -11,9 +11,9 @@ const readMe = {
   aMemberOf: () => {
     console.log("@CodingStudios", "@BotStudios")
   },
-  location: "Prince Of Wales Island",
+  location: "undefined",
   stats: () => {
-    return "43 followers with 4 stars on this repository, 30/12/23"
+    return "undefined followers with 4 stars on this repository, 30/12/23"
   }
 };
 ```
