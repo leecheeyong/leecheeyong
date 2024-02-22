@@ -6,11 +6,6 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  status: "Offline - None",
-  lastSeen: "22:39 PM",
-  aMemberOf: () => {
-    console.log("@CodingStudios", "@BotStudios")
-  },
   location: "Prince Of Wales Island",
   stats: () => {
     return "43 followers with 4 stars on this repository, 03/01/24"
