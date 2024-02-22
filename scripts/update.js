@@ -36,7 +36,8 @@ var edited;
   ).data;
 
   const finalCode = eval(
-    `readMe.location = "${location}"; readMe.stats = () => { return "${followers} followers with ${stargazers_count} stars on this repository, ${dayjs()
+    `function edit() { \n${codeBlock}\n
+     readMe.location = "${location}"; readMe.stats = () => { return "${followers} followers with ${stargazers_count} stars on this repository, ${dayjs()
       .tz("Asia/Taipei")
       .format("DD/MM/YY")}" };  return readMe }; edit()`
   );
