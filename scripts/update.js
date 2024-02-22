@@ -24,16 +24,6 @@ setRelays([
 
 var edited;
 (async () => {
-  const status = (
-    await axios
-      .get(`https://garden.is-a.dev/v2/discordstatus/785783071244025867`)
-      .catch((e) => console.log(e))
-  )?.data;
-  const activity = (
-    await axios
-      .get(`https://garden.is-a.dev/v2/discordactivity/785783071244025867`)
-      .catch((e) => console.log(e))
-  )?.data;
   const { location, followers } = (
     await fetch({ url: `https://api.github.com/users/leecheeyong` }).catch(
       (e) => console.log(e)
@@ -46,9 +36,7 @@ var edited;
   ).data;
 
   const finalCode = eval(
-    `function edit() { \n${codeBlock}\n readMe.status = "${status.message} - ${
-      activity.message
-    }"; readMe.location = "${location}"; readMe.stats = () => { return "${followers} followers with ${stargazers_count} stars on this repository, ${dayjs()
+    `readMe.location = "${location}"; readMe.stats = () => { return "${followers} followers with ${stargazers_count} stars on this repository, ${dayjs()
       .tz("Asia/Taipei")
       .format("DD/MM/YY")}" };  return readMe }; edit()`
   );
@@ -82,17 +70,6 @@ var edited;
         .slice(1, -2) + "}"
     );
   }
-  if (
-    status?.message &&
-    activity?.message &&
-    status?.message != "Not Found" &&
-    activity?.message != "Not Found"
-  ) {
-    if(finalCode.status == `${status.message} - ${activity.message}` && status.message.toLowerCase() != 'offline') finalCode.lastSeen = `${dayjs()
-        .tz("Asia/Taipei")
-        .format(
-          "HH:mm A"
-    )}`;
     fs.writeFileSync(
       "./README.md",
       `${readMe.replace(
@@ -107,7 +84,5 @@ var edited;
       "./profile/discord.txt",
       `${status.message} - ${activity.message}`
     );
-  } else {
-    console.log("profile not updated");
-  }
+
 })();
