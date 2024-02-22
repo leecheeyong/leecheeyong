@@ -8,7 +8,7 @@ const readMe = {
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
   location: "Prince Of Wales Island",
   stats: () => {
-    return "43 followers with 4 stars on this repository, 03/01/24"
+    return "44 followers with 4 stars on this repository, 23/02/24"
   }
 };
 ```
