@@ -81,9 +81,5 @@ var edited;
         })}\n`
       )}`
     );
-    fs.writeFileSync(
-      "./profile/discord.txt",
-      `${status.message} - ${activity.message}`
-    );
 
 })();
