@@ -6,9 +6,9 @@ const readMe = {
     bio: "joe.js.org"
   },
   languages: ["Javascript/Node.js", "Python", "HTML/CSS"],
-  location: "undefined",
+  location: "Prince Of Wales Island",
   stats: () => {
-    return "undefined followers with 4 stars on this repository, 12/03/24"
+    return "44 followers with 4 stars on this repository, 12/03/24"
   }
 };
 ```
