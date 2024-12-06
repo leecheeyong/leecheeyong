@@ -6,7 +6,7 @@ var gOPD = require('gopd');
 
 var hasProto = require('../');
 
-var getter = require('../helpers/getDunder');
+var getter = require('dunder-proto/get');
 
 test('hasProto', function (t) {
 	var result = hasProto();

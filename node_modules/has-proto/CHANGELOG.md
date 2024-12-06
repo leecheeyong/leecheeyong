@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.0](https://github.com/inspect-js/has-proto/compare/v1.1.0...v1.2.0) - 2024-12-06
+
+### Commits
+
+- [Refactor] use `dunder-proto` instead of `call-bind` [`6e5e76c`](https://github.com/inspect-js/has-proto/commit/6e5e76ce3bf4c01ebb99b38dcd61bee1ba35073f)
+- [actions] split out node 10-20, and 20+ [`3b8e9e6`](https://github.com/inspect-js/has-proto/commit/3b8e9e651431ef5e9725dae68881b8107e812ee0)
+- [Dev Deps] update `@ljharb/tsconfig`, `gopd` [`57bcd00`](https://github.com/inspect-js/has-proto/commit/57bcd000625c7d1e7f41fd10b4a8e1ea380029dd)
+- [actions] skip `npm ls` in node &lt; 10 [`ce3a4d7`](https://github.com/inspect-js/has-proto/commit/ce3a4d76d4f15d94540cb5f2ae50967cc6299ee3)
+
 ## [v1.1.0](https://github.com/inspect-js/has-proto/compare/v1.0.3...v1.1.0) - 2024-12-01
 
 ### Commits
