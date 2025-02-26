@@ -1,11 +1,5 @@
-/*! Axios v1.8.0 Copyright (c) 2025 Matt Zabriskie and contributors */
+/*! Axios v1.8.1 Copyright (c) 2025 Matt Zabriskie and contributors */
 'use strict';
-
-var crypto = require('crypto');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var crypto__default = /*#__PURE__*/_interopDefaultLegacy(crypto);
 
 function bind(fn, thisArg) {
   return function wrap() {
@@ -613,28 +607,6 @@ const toFiniteNumber = (value, defaultValue) => {
   return value != null && Number.isFinite(value = +value) ? value : defaultValue;
 };
 
-const ALPHA = 'abcdefghijklmnopqrstuvwxyz';
-
-const DIGIT = '0123456789';
-
-const ALPHABET = {
-  DIGIT,
-  ALPHA,
-  ALPHA_DIGIT: ALPHA + ALPHA.toUpperCase() + DIGIT
-};
-
-const generateString = (size = 16, alphabet = ALPHABET.ALPHA_DIGIT) => {
-  let str = '';
-  const {length} = alphabet;
-  const randomValues = new Uint32Array(size);
-  crypto__default["default"].randomFillSync(randomValues);
-  for (let i = 0; i < size; i++) {
-    str += alphabet[randomValues[i] % length];
-  }
-
-  return str;
-};
-
 /**
  * If the thing is a FormData object, return true, otherwise return false.
  *
@@ -762,8 +734,6 @@ var utils$1 = {
   findKey,
   global: _global,
   isContextDefined,
-  ALPHABET,
-  generateString,
   isSpecCompliantForm,
   toJSONObject,
   isAsyncFn,
@@ -3098,7 +3068,7 @@ function dispatchRequest(config) {
   });
 }
 
-const VERSION = "1.8.0";
+const VERSION = "1.8.1";
 
 const validators$1 = {};
 

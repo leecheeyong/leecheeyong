@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.8.1](https://github.com/axios/axios/compare/v1.8.0...v1.8.1) (2025-02-26)
+
+
+### Bug Fixes
+
+* **utils:** move `generateString` to platform utils to avoid importing crypto module into client builds; ([#6789](https://github.com/axios/axios/issues/6789)) ([36a5a62](https://github.com/axios/axios/commit/36a5a620bec0b181451927f13ac85b9888b86cec))
+
+### Contributors to this release
+
+- <img src="https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18" alt="avatar" width="18"/> [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS "+51/-47 (#6789 )")
+
 # [1.8.0](https://github.com/axios/axios/compare/v1.7.9...v1.8.0) (2025-02-25)
 
 

@@ -1,13 +1,9 @@
-/*! Axios v1.8.0 Copyright (c) 2025 Matt Zabriskie and contributors */
+/*! Axios v1.8.1 Copyright (c) 2025 Matt Zabriskie and contributors */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('crypto')) :
-  typeof define === 'function' && define.amd ? define(['crypto'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.axios = factory(global.crypto));
-})(this, (function (crypto) { 'use strict';
-
-  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-  var crypto__default = /*#__PURE__*/_interopDefaultLegacy(crypto);
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.axios = factory());
+})(this, (function () { 'use strict';
 
   function _AsyncGenerator(e) {
     var r, t;
@@ -1270,25 +1266,6 @@
   var toFiniteNumber = function toFiniteNumber(value, defaultValue) {
     return value != null && Number.isFinite(value = +value) ? value : defaultValue;
   };
-  var ALPHA = 'abcdefghijklmnopqrstuvwxyz';
-  var DIGIT = '0123456789';
-  var ALPHABET = {
-    DIGIT: DIGIT,
-    ALPHA: ALPHA,
-    ALPHA_DIGIT: ALPHA + ALPHA.toUpperCase() + DIGIT
-  };
-  var generateString = function generateString() {
-    var size = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 16;
-    var alphabet = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ALPHABET.ALPHA_DIGIT;
-    var str = '';
-    var length = alphabet.length;
-    var randomValues = new Uint32Array(size);
-    crypto__default["default"].randomFillSync(randomValues);
-    for (var i = 0; i < size; i++) {
-      str += alphabet[randomValues[i] % length];
-    }
-    return str;
-  };
 
   /**
    * If the thing is a FormData object, return true, otherwise return false.
@@ -1405,8 +1382,6 @@
     findKey: findKey,
     global: _global,
     isContextDefined: isContextDefined,
-    ALPHABET: ALPHABET,
-    generateString: generateString,
     isSpecCompliantForm: isSpecCompliantForm,
     toJSONObject: toJSONObject,
     isAsyncFn: isAsyncFn,
@@ -3683,7 +3658,7 @@
     });
   }
 
-  var VERSION = "1.8.0";
+  var VERSION = "1.8.1";
 
   var validators$1 = {};
 
