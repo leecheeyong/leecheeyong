@@ -1,5 +1,11 @@
-// Axios v1.7.9 Copyright (c) 2024 Matt Zabriskie and contributors
+/*! Axios v1.8.0 Copyright (c) 2025 Matt Zabriskie and contributors */
 'use strict';
+
+var crypto = require('crypto');
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var crypto__default = /*#__PURE__*/_interopDefaultLegacy(crypto);
 
 function bind(fn, thisArg) {
   return function wrap() {
@@ -620,8 +626,10 @@ const ALPHABET = {
 const generateString = (size = 16, alphabet = ALPHABET.ALPHA_DIGIT) => {
   let str = '';
   const {length} = alphabet;
-  while (size--) {
-    str += alphabet[Math.random() * length|0];
+  const randomValues = new Uint32Array(size);
+  crypto__default["default"].randomFillSync(randomValues);
+  for (let i = 0; i < size; i++) {
+    str += alphabet[randomValues[i] % length];
   }
 
   return str;
@@ -2248,8 +2256,9 @@ function combineURLs(baseURL, relativeURL) {
  *
  * @returns {string} The combined full path
  */
-function buildFullPath(baseURL, requestedURL) {
-  if (baseURL && !isAbsoluteURL(requestedURL)) {
+function buildFullPath(baseURL, requestedURL, allowAbsoluteUrls) {
+  let isRelativeUrl = !isAbsoluteURL(requestedURL);
+  if (baseURL && isRelativeUrl || allowAbsoluteUrls == false) {
     return combineURLs(baseURL, requestedURL);
   }
   return requestedURL;
@@ -3089,7 +3098,7 @@ function dispatchRequest(config) {
   });
 }
 
-const VERSION = "1.7.9";
+const VERSION = "1.8.0";
 
 const validators$1 = {};
 
@@ -3274,6 +3283,13 @@ class Axios {
       }
     }
 
+    // Set config.allowAbsoluteUrls
+    if (config.allowAbsoluteUrls !== undefined) ; else if (this.defaults.allowAbsoluteUrls !== undefined) {
+      config.allowAbsoluteUrls = this.defaults.allowAbsoluteUrls;
+    } else {
+      config.allowAbsoluteUrls = true;
+    }
+
     validator.assertOptions(config, {
       baseUrl: validators.spelling('baseURL'),
       withXsrfToken: validators.spelling('withXSRFToken')
@@ -3369,7 +3385,7 @@ class Axios {
 
   getUri(config) {
     config = mergeConfig(this.defaults, config);
-    const fullPath = buildFullPath(config.baseURL, config.url);
+    const fullPath = buildFullPath(config.baseURL, config.url, config.allowAbsoluteUrls);
     return buildURL(fullPath, config.params, config.paramsSerializer);
   }
 }

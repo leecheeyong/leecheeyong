@@ -1,9 +1,13 @@
-// Axios v1.7.9 Copyright (c) 2024 Matt Zabriskie and contributors
+/*! Axios v1.8.0 Copyright (c) 2025 Matt Zabriskie and contributors */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.axios = factory());
-})(this, (function () { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('crypto')) :
+  typeof define === 'function' && define.amd ? define(['crypto'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.axios = factory(global.crypto));
+})(this, (function (crypto) { 'use strict';
+
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+  var crypto__default = /*#__PURE__*/_interopDefaultLegacy(crypto);
 
   function _AsyncGenerator(e) {
     var r, t;
@@ -1278,8 +1282,10 @@
     var alphabet = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ALPHABET.ALPHA_DIGIT;
     var str = '';
     var length = alphabet.length;
-    while (size--) {
-      str += alphabet[Math.random() * length | 0];
+    var randomValues = new Uint32Array(size);
+    crypto__default["default"].randomFillSync(randomValues);
+    for (var i = 0; i < size; i++) {
+      str += alphabet[randomValues[i] % length];
     }
     return str;
   };
@@ -2720,8 +2726,9 @@
    *
    * @returns {string} The combined full path
    */
-  function buildFullPath(baseURL, requestedURL) {
-    if (baseURL && !isAbsoluteURL(requestedURL)) {
+  function buildFullPath(baseURL, requestedURL, allowAbsoluteUrls) {
+    var isRelativeUrl = !isAbsoluteURL(requestedURL);
+    if (baseURL && isRelativeUrl || allowAbsoluteUrls == false) {
       return combineURLs(baseURL, requestedURL);
     }
     return requestedURL;
@@ -3676,7 +3683,7 @@
     });
   }
 
-  var VERSION = "1.7.9";
+  var VERSION = "1.8.0";
 
   var validators$1 = {};
 
@@ -3867,6 +3874,13 @@
             }, true);
           }
         }
+
+        // Set config.allowAbsoluteUrls
+        if (config.allowAbsoluteUrls !== undefined) ; else if (this.defaults.allowAbsoluteUrls !== undefined) {
+          config.allowAbsoluteUrls = this.defaults.allowAbsoluteUrls;
+        } else {
+          config.allowAbsoluteUrls = true;
+        }
         validator.assertOptions(config, {
           baseUrl: validators.spelling('baseURL'),
           withXsrfToken: validators.spelling('withXSRFToken')
@@ -3939,7 +3953,7 @@
       key: "getUri",
       value: function getUri(config) {
         config = mergeConfig(this.defaults, config);
-        var fullPath = buildFullPath(config.baseURL, config.url);
+        var fullPath = buildFullPath(config.baseURL, config.url, config.allowAbsoluteUrls);
         return buildURL(fullPath, config.params, config.paramsSerializer);
       }
     }]);
