@@ -7,7 +7,7 @@ const readMe = {
   },
   location: "undefined",
   stats: () => {
-    return "undefined followers with undefined stars on this repository, 06/04/25"
+    return "undefined followers with 6 stars on this repository, 06/04/25"
   }
 };
 ```
