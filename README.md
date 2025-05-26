@@ -5,9 +5,9 @@ const readMe = {
     github: "github.com/leecheeyong",
     bio: "joe.js.org"
   },
-  location: "undefined",
+  location: "Prince Of Wales Island",
   stats: () => {
-    return "undefined followers with undefined stars on this repository, 27/05/25"
+    return "46 followers with 6 stars on this repository, 27/05/25"
   }
 };
 ```
