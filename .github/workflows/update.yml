@@ -20,12 +20,12 @@ jobs:
  
     - name: Run
       run: |
-       yarn add axios
-       yarn add substrings
-       yarn add dayjs
-       yarn add js-beautify
-       yarn
-       yarn maintain
+        yarn
+        yarn maintain
+   # yarn add axios
+   # yarn add substrings
+   # yarn add dayjs
+   # yarn add js-beautify
    # rm -r node_modules
 
     - name: Commit files
